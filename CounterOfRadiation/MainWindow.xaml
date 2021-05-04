@@ -5,13 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CounterOfRadiation"
         mc:Ignorable="d"
-        Title="Счетчик импульсов" Height="540" Width="720">
+        Title="Счетчик импульсов" Height="420" Width="720">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -420,8 +416,8 @@
             Margin="10,9,0,0" 
             Grid.Row="11" 
             VerticalAlignment="Top" 
-            Width="120" Height="31" 
-            Grid.RowSpan="2" 
+            Width="120" 
+            Height="21" 
             FontFamily="Times New Roman"/>
     </Grid>
 </Window>
