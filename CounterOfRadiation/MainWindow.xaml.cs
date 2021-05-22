@@ -244,13 +244,13 @@ namespace CounterOfRadiation
                 Block_interface();
                 if ((bool)Check_Time_Experiment.IsChecked){
                     tim_time = TimeSpan.Parse(TextBox_Time_Experiment.Text);
-                    startTime = DateTime.Now;
                     TimerCallback tm = new TimerCallback(Interview2);
+                    startTime = DateTime.Now;
                     timer1 = new Timer(tm, null, 0, 100);
                 }
                 else{
-                    startTime = DateTime.Now;
                     TimerCallback tm = new TimerCallback(Interview1);
+                    startTime = DateTime.Now;
                     timer1 = new Timer(tm, null, 0, 100);
                 }
             }
