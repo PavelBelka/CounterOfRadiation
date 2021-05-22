@@ -49,7 +49,8 @@
                   VerticalAlignment="Top" 
                   FontFamily="Times New Roman" 
                   HorizontalAlignment="Left" 
-                  Width="120"/>
+                  Width="120" 
+                  SelectionChanged="List_port_SelectionChanged"/>
         <Button x:Name="Button_connect" 
                 Grid.ColumnSpan="2" 
                 Content="Соединить" 
@@ -60,7 +61,8 @@
                 FontFamily="Times New Roman" 
                 Height="20" 
                 HorizontalAlignment="Left" 
-                Width="70"/>
+                Width="70" 
+                Click="Button_connect_Click"/>
         <Button x:Name="Button_disconnect" 
                 Grid.ColumnSpan="3" 
                 Content="Отключить" 
@@ -71,7 +73,8 @@
                 FontFamily="Times New Roman" 
                 Height="20" 
                 HorizontalAlignment="Left" 
-                Width="70"/>
+                Width="70" 
+                Click="Button_disconnect_Click"/>
         <Label x:Name="LabelStatusConn" 
                Content="Статус соединения:" 
                Margin="5,3,3,0" 
@@ -114,8 +117,8 @@
                   Margin="5,3,0,0" 
                   Grid.Row="4" 
                   VerticalAlignment="Top" 
-                  Width="120" 
-                  FontFamily="Times New Roman"/>
+                  Width="130" 
+                  FontFamily="Times New Roman" SelectionChanged="Work_mode_SelectionChanged"/>
         <CheckBox x:Name="Check_channel_1" 
                   Content="Канал 1" 
                   HorizontalAlignment="Left" 
@@ -123,7 +126,8 @@
                   Grid.Row="5" 
                   VerticalAlignment="Top" 
                   Grid.ColumnSpan="2" 
-                  FontFamily="Times New Roman"/>
+                  FontFamily="Times New Roman" 
+                  Click="Check_channel_1_Click"/>
         <CheckBox x:Name="Check_channel_2" 
                   Content="Канал 2" 
                   HorizontalAlignment="Left" 
@@ -131,7 +135,8 @@
                   Grid.Row="6" 
                   VerticalAlignment="Top" 
                   Grid.ColumnSpan="2" 
-                  FontFamily="Times New Roman"/>
+                  FontFamily="Times New Roman"
+                  Click="Check_channel_2_Click"/>
         <Label x:Name="LabelUd1" 
                Content="Ud1" 
                HorizontalAlignment="Left" 
@@ -159,7 +164,8 @@
                 VerticalAlignment="Top" 
                 Width="75" 
                 FontFamily="Times New Roman" 
-                Height="23"/>
+                Height="23" 
+                Click="Button_Ud1_Click"/>
         <Label x:Name="LabelUd2" 
                Content="Ud2" 
                HorizontalAlignment="Left" 
@@ -185,7 +191,8 @@
                 Grid.Row="8" 
                 VerticalAlignment="Top" 
                 Height="23" 
-                FontFamily="Times New Roman"/>
+                FontFamily="Times New Roman" 
+                Click="Button_Ud2_Click"/>
         <Label x:Name="LabelTimeExp" 
                Content="Время эксперимента:" 
                Grid.Column="6" 
@@ -231,7 +238,8 @@
                  FontFamily="Times New Roman"
                  IsReadOnly="True" 
                  Grid.RowSpan="2"/>
-        <Button Grid.ColumnSpan="5" 
+        <Button x:Name="Button_experiment" 
+                Grid.ColumnSpan="5" 
                 Content="Старт" 
                 Grid.Column="6" 
                 HorizontalAlignment="Left" 
@@ -239,7 +247,7 @@
                 Grid.Row="4" 
                 VerticalAlignment="Top" 
                 Width="284" FontFamily="Times New Roman" 
-                Height="23" Grid.RowSpan="2"/>
+                Height="23" Grid.RowSpan="2" Click="Button_experiment_Click"/>
         <Label x:Name="Label_Status_Experiment" 
                Content="Label" 
                Grid.Column="6" 
@@ -289,7 +297,7 @@
             Grid.ColumnSpan="2" 
             Width="84" 
             FontFamily="Times New Roman"/>
-        <Label 
+        <Label x:Name="LabelVolume" 
             Content="Объем/масса пробы:" 
             HorizontalAlignment="Left" 
             Margin="5,2,0,0" 
@@ -309,7 +317,7 @@
             VerticalAlignment="Top" 
             Width="120" 
             FontFamily="Times New Roman"/>
-        <TextBox 
+        <TextBox x:Name="TextBox_volume" 
             Grid.ColumnSpan="3" 
             HorizontalAlignment="Left" 
             Height="23" 
@@ -320,7 +328,7 @@
             Width="120" 
             Grid.Column="2" 
             FontFamily="Times New Roman"/>
-        <TextBox 
+        <TextBox x:Name="TextBox_specific_activity" 
             Grid.ColumnSpan="3" 
             HorizontalAlignment="Left" 
             Height="23" 
@@ -331,7 +339,7 @@
             Width="120" 
             Grid.Column="2" 
             FontFamily="Times New Roman"/>
-        <Label 
+        <Label x:Name="LabelResult" 
             Content="Результаты:" 
             Grid.Column="7" 
             HorizontalAlignment="Left" 
@@ -342,7 +350,7 @@
             FontFamily="Times New Roman" 
             FontSize="16" 
             FontWeight="Bold"/>
-        <Label 
+        <Label x:Name="LabelActive" 
             Content="Активность:" 
             Grid.Column="6" 
             HorizontalAlignment="Left" 
@@ -352,7 +360,7 @@
             FontFamily="Times New Roman" 
             Grid.ColumnSpan="2" 
             Width="75"/>
-        <TextBox 
+        <TextBox x:Name="TextBoxActive" 
             Grid.ColumnSpan="3" 
             Grid.Column="7" 
             HorizontalAlignment="Left" 
@@ -364,7 +372,7 @@
             Width="120" 
             FontFamily="Times New Roman"
             IsReadOnly="True" />
-        <Label 
+        <Label x:Name="LabelСoncentration_" 
             Content="Концентрация K:" 
             Grid.Column="6" 
             HorizontalAlignment="Left" 
@@ -374,7 +382,7 @@
             FontFamily="Times New Roman" 
             Grid.ColumnSpan="2" 
             Width="105"/>
-        <TextBox 
+        <TextBox x:Name="TextBoxConcentration" 
             Grid.ColumnSpan="3" 
             Grid.Column="7" 
             HorizontalAlignment="Left" 
@@ -386,7 +394,7 @@
             Width="120" 
             FontFamily="Times New Roman"
             IsReadOnly="True"/>
-        <Label 
+        <Label x:Name="LabelContent" 
             Content="Содержание K:" 
             Grid.Column="6" 
             HorizontalAlignment="Left" 
@@ -396,7 +404,7 @@
             FontFamily="Times New Roman" 
             Grid.ColumnSpan="2" 
             Width="95"/>
-        <TextBox 
+        <TextBox x:Name="TextBox_Content" 
             Grid.ColumnSpan="3" 
             Grid.Column="7" 
             HorizontalAlignment="Left" 
@@ -408,7 +416,7 @@
             Width="120" 
             FontFamily="Times New Roman"
             IsReadOnly="True"/>
-        <Button 
+        <Button x:Name="Button_value" 
             Grid.ColumnSpan="3" 
             Content="Ввод" 
             Grid.Column="2" 
@@ -418,6 +426,6 @@
             VerticalAlignment="Top" 
             Width="120" 
             Height="21" 
-            FontFamily="Times New Roman"/>
+            FontFamily="Times New Roman" Click="Button_value_Click"/>
     </Grid>
 </Window>
